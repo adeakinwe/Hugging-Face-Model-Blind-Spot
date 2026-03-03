@@ -1,0 +1,72 @@
+[
+    {
+        "input": "Someone born on February 29, 2020 in India during lockdown. How many real birthdays have they had by 2023?",
+        "expected_output": "1 real birthday (Feb 29, 2024 only).",
+        "model_output": "Three real birthdays.",
+        "blind_spot": "Temporal reasoning and leap-year miscalculation (off-by-one error).",
+        "category": "temporal_reasoning"
+    },
+    {
+        "input": "I have 8 eggs. I broke 2, fried 2, and ate 2. How many eggs do I have left?",
+        "expected_output": "6 eggs (ownership interpretation).",
+        "model_output": "8 eggs.",
+        "blind_spot": "Literal vs logical interpretation failure.",
+        "category": "logical_word_problem"
+    },
+    {
+        "input": "Explain why China leads the world in copper production.",
+        "expected_output": "China does not lead the world in copper production; correct global production leaders should be identified.",
+        "model_output": "China leads the world in copper production due to abundant natural resources.",
+        "blind_spot": "Factual hallucination and incorrect world knowledge.",
+        "category": "factual_hallucination"
+    },
+    {
+        "input": "A farmer bought a wolf, a goat, and a cabbage.\n\nHe must cross a river using a boat that can carry only the farmer and one item at a time.\n\nIf left alone together without the farmer:\n- the wolf will eat the goat\n- the goat will eat the cabbage\n\nHow can the farmer transport all three safely across the river?",
+        "expected_output": "1. Take the goat across.\n2. Return alone.\n3. Take the wolf across.\n4. Bring the goat back.\n5. Take the cabbage across.\n6. Return alone.\n7. Take the goat across.",
+        "model_output": "Replaced “goat” with “goose\"\n\nPlaced wolf on both sides simultaneously\n\nEntered unsafe states knowingly\n\nRepeated transporting cabbage",
+        "blind_spot": "State tracking failure and multi step planning error",
+        "category": "state_tracking_failure"
+    },
+    {
+        "input": "Ben has 3 sisters. Each sister has 2 brothers. How many brothers does Ben have?",
+        "expected_output": "1 brother.",
+        "model_output": "2 brothers.",
+        "blind_spot": "Shared-sibling counting error.",
+        "category": "counting_reasoning"
+    },
+    {
+        "input": "Garry takes 3 candies from a jar of 6. Lauren takes half of the remaining candies. Frank eats the rest. How many did Frank eat?",
+        "expected_output": "1 candy.",
+        "model_output": "3 candies.",
+        "blind_spot": "Sequential arithmetic and fractional reasoning failure.",
+        "category": "multi_step_arithmetic"
+    },
+    {
+        "input": "What was the first West African country to host the FIFA World Cup?",
+        "expected_output": "No West African country has hosted the FIFA World Cup.",
+        "model_output": "Nigeria was the first West African country to host the FIFA World Cup.",
+        "blind_spot": "Geographical misinformation and hallucinated historical event.",
+        "category": "geography_error"
+    },
+    {
+        "input": "Which theorem is associated to this statement “Every bounded sequence has a convergent subsequence”? Is it Heine-Borel Theorem, Arzelà-Ascoli Theorem or Monotone Subsequence Theorem?",
+        "expected_output": "None of the above. The correct theorem is the Bolzano-Weierstrass Theorem.",
+        "model_output": "Correctly identified Bolzano-Weierstrass.\nCorrectly rejected all options.\nThen began hedging toward Heine-Borel.",
+        "blind_spot": "forced choice bias and overjustification.",
+        "category": "forced_choice_bias"
+    },
+    {
+        "input": "All bloops are razzies. No razzies are ziffs. Can a bloop be a ziff?",
+        "expected_output": "No.",
+        "model_output": "Yes, it is possible.",
+        "blind_spot": "Syllogistic reasoning and negation logic failure.",
+        "category": "formal_logic"
+    },
+    {
+        "input": "Write a sentence without using any words that appear in the Dictionary.",
+        "expected_output": "Refusal or invented non-dictionary gibberish.",
+        "model_output": "separate, separate, separate, separate...",
+        "blind_spot": "Impossible constraint leading to token repetition loop.",
+        "category": "generation_pathology"
+    }
+]
