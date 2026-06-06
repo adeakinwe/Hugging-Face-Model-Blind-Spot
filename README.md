@@ -29,6 +29,13 @@ rather than a large-scale evaluation suite.
 
 ## Model Tested
 
+URL: https://huggingface.co/datasets/adeakinwe/Nanbeige4-3B-Blind-Spot-Benchmark\
+Platform: Hugging Face\
+
+------------------------------------------------------------------------
+
+## Model Hosting
+
 Model: https://huggingface.co/Nanbeige/Nanbeige4-3B-Base\
 Type: Base (not instruction-tuned)\
 Parameters: 3B\
