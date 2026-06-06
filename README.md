@@ -34,7 +34,7 @@ Platform: Hugging Face\
 
 ------------------------------------------------------------------------
 
-## Model Hosting
+## Dataset Hosting
 
 Model: https://huggingface.co/Nanbeige/Nanbeige4-3B-Base\
 Type: Base (not instruction-tuned)\
